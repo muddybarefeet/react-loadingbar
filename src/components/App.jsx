@@ -1,6 +1,6 @@
 var React = require('react');
 
-var PasteBox = require('./PasteBox.jsx');
+var LoadingBar = require('./LoadingBar.jsx');
 
 //change to what default you want
 // var x = [
@@ -28,7 +28,7 @@ var APP = React.createClass({
   render: function(){
     return (
       <div className="container">
-        
+        <LoadingBar />
       </div>
     );
   }
