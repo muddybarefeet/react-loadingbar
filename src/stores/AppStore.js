@@ -31,21 +31,20 @@ AppDispatcher.register(function(payload){
   var action = payload.action;
 
   if(action.actionType === 'START_LOAD'){
-    console.log('in store');
-    progress = ((action.data[0]*100)/action.data[1]);
+    progress = 0;
+    counter = 0;
     AppStore.emitChange();
   }
 
   if(action.actionType === 'EMIT_LOAD'){
-    console.log('in store2', action.data[0]);
     counter++;
-    progress = (counter*100)/action.data[1];
+    progress = (counter*100)/action.data;
     AppStore.emitChange();
   }
 
   if(action.actionType === 'END_LOAD'){
     //this would load the compleate data waiting for
-    console.log('in store3');
+    AppStore.emitChange();
   }
 
 });

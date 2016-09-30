@@ -25,7 +25,6 @@ var LoadingBar = React.createClass({
   },
 
   _onChange: function () {
-    console.log('changing', appStore.getGeocodeStatus());
     this.setState({
       progress: appStore.getGeocodeStatus() + "%"
     });
